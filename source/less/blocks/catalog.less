@@ -85,14 +85,19 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 53px;
+
+      &:hover {
+        box-shadow: 0 6px 10px 0px rgba(@black, 0.1);
+      }
+
+      &:active {
+        box-shadow: 0 5px 3px 0px rgba(@black, 0.1);
+      }
     }
 
     &__photo {
       width: 50%;
       height: auto;
-    }
-
-    &__photo img {
     }
 
     &__info {
