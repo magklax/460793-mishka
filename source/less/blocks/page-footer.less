@@ -1,5 +1,45 @@
 .page-footer {
-  padding: 40px 30px;
   box-sizing: border-box;
   background-color: @whitesmoke;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__logo {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    padding: 42px 0;
+
+    &__container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__logo {
+      width: 25%;
+      display: block;
+
+      &:hover svg path,
+      &:focus svg path {
+        fill: @downy;
+      }
+
+      &:active svg {
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__logo {
+    width: 200px;
+  }
 }

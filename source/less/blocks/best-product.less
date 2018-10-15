@@ -1,24 +1,149 @@
 .best-product {
-  padding: 27px 30px;  /*временно*/
+  padding: 27px 0 40px;
   box-sizing: border-box;
+
+  &__header {
+    margin-bottom: 18px;
+  }
+
+  &__index {
+    line-height: 24px;
+  }
+
+  &__text {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  &__table {
+    width: 100%;
+    margin-bottom: 29px;
+    border-collapse: collapse;
+  }
+
+  &__table tr {
+    border-bottom: 1px solid rgba(@grey, 0.1);
+  }
+
+  &__table td {
+    padding: 8px 0;
+  }
+
+  &__table td:first-child {
+    width: 97px;
+  }
+
+  &__pic {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  &__price {
+    display: block;
+    margin-bottom: 27px;
+    text-align: center;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 700;
+  }
 }
 
-.best-product__index {
-  line-height: 24px;
+@media (min-width: @tablet-width) {
+  .best-product {
+    padding: 43px 0 65px;
+
+    &__header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+
+    &__title {
+      width: 100%;
+    }
+
+    &__subtitle {
+      width: 155px;
+      display: block;
+      margin-right: 0;
+      padding-top: 8px;
+      text-align: center;
+    }
+
+    &__index {
+      display: flex;
+      position: relative;
+    }
+
+    &__wrapper {
+      width: 50%;
+      box-sizing: border-box;
+      padding-right: 6.74%;
+      flex-grow: 1;
+    }
+
+    &__text {
+      font-size: 17px;
+      line-height: 30px;
+      margin: -10px 0 35px;
+    }
+
+    &__pic {
+      width: 50%;
+      margin: 0;
+      flex-grow: 1;
+      line-height: 0;
+      text-align: right;
+    }
+
+    &__wrapper--price {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    &__price {
+      font-size: 20px;
+      margin-bottom: 37px;
+    }
+  }
 }
 
-.best-product__text {
-  margin: 20px 0;
-}
+@media (min-width: @desktop-width) {
+  .best-product {
+    padding: 122px 0 95px;
 
-.best-product__table td {
-  .reset();
-}
+    &__header {
+      width: 100%;
+    }
 
-.best-product__price {
-  margin: 18px 0 26px;
-  text-align: center;
-  font-size: 17px;
-  line-height: 24px;
-  font-weight: 700;
+    &__title {
+      order: 1;
+      width: 875px;
+    }
+
+    &__subtitle {
+      width: 175px;
+      box-sizing: border-box;
+      padding: 8px 30px 0;
+    }
+
+    &__wrapper {
+      padding-left: 175px;
+      padding-right: 55px;
+    }
+
+    &__text {
+      margin-bottom: 47px;
+    }
+
+    &__pic {
+      margin-top: -168px;
+      z-index: -1;
+    }
+
+    &__price {
+      margin-bottom: 33px;
+    }
+  }
 }

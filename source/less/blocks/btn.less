@@ -11,4 +11,15 @@
   border: 2px solid @grey;
   text-transform: uppercase;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    background-color: @grey;
+    color: @white;
+  }
+
+  &:active {
+    background-color: @grey;
+    color: rgba(@white, 0.3);
+  }
 }

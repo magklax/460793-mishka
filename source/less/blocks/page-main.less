@@ -1,13 +1,11 @@
-.page-main__title {
-  padding: 75px 30px;
-  box-sizing: border-box;
-  color: @black;
-  text-align: center;
-  background-color: @whitesmoke;
+.page-main {
+  margin: 0 auto;
+  min-width: 320px;
+}
 
-  &--index {
-    background-image: url("../../img/hero-mobile@1x.jpg");
-    background-position: top center;
-    background-repeat: no-repeat;
+@media (min-width: @tablet-width) {
+  .page-main {
+    min-width: 768px;
+    box-sizing: border-box;
   }
 }
