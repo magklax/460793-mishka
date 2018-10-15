@@ -1,4 +1,142 @@
 .manufacture {
-  padding: 30px 30px 90px;
+  position: relative;
+  margin-bottom: 58px;
+  padding: 95px 0 34px;
   box-sizing: border-box;
+  border: 1px solid @whisper;
+
+  &__video {
+    min-height: 150px;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    background-image: url("../../img/video-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../../img/video-mobile@2x.jpg");
+      background-size: 260px;
+    }
+  }
+
+  &__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__info {
+    padding: 0 34px;
+  }
+
+  &__title {
+    position: absolute;
+    padding-left: 89px;
+    top: 22px;
+    left: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 33px;
+      width: 32px;
+      height: 32px;
+      background-image: url("../../img/icon-video.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__text {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 13px;
+    line-height: 24px;
+  }
+
+  &__btn {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .manufacture {
+    padding: 0 0 46px;
+    margin-bottom: 63px;
+
+    &__video {
+      min-height: 455px;
+      background-image: url("../../img/video-tablet@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../../img/video-tablet@2x.jpg");
+        background-size: 668px;
+      }
+    }
+
+    &__title {
+      position: relative;
+      padding-left: 65px;
+      top: 0;
+      margin-bottom: 35px;
+
+      &::before {
+        top: -5px;
+        left: 0;
+      }
+    }
+
+    &__info {
+      padding: 0 40px;
+    }
+
+    &__text {
+      font-size: 15px;
+      line-height: 30px;
+      margin-bottom: 35px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .manufacture {
+    padding-bottom: 0;
+    margin-bottom: 104px;
+    display: flex;
+
+    &__video {
+      margin-bottom: 0;
+
+      img {
+        width: 683px;
+      }
+    }
+
+    &__info {
+      width: 350px;
+      box-sizing: border-box;
+      padding: 94px 60px 0;
+      margin-left: auto;
+    }
+
+    &__title {
+      padding: 0;
+
+      &::before {
+        top: -53px;
+      }
+    }
+
+    &__text {
+      margin-bottom: 45px;
+    }
+  }
 }
