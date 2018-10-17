@@ -1,6 +1,11 @@
 .contacts {
   padding: 39px 0;
 
+  &__container {
+    width: @mobile;
+    margin: 0 auto;
+  }
+
   &__title {
     margin-bottom: 10px;
   }
@@ -66,6 +71,10 @@
     flex-direction: column;
     padding: 62px 0 58px;
 
+    &__container {
+      width: @tablet;
+    }
+
     &__title {
       margin-left: -3px;
       margin-bottom: 35px;
@@ -116,6 +125,8 @@
 
 @media (min-width: @desktop-width) {
   .contacts {
+    width: @desktop;
+    margin: 0 auto;
     position: relative;
     flex-direction: row;
     flex-wrap: wrap;

@@ -36,5 +36,9 @@
   ],
   "engines": {
     "node": "8.12"
+  },
+  "dependencies": {
+    "imagemin-webp": "^4.1.0",
+    "normalize.less": "^1.0.0"
   }
 }

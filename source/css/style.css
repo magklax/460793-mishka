@@ -302,13 +302,13 @@ template {
   display: none;
 }
 @font-face {
-  font-family: "Opensans";
+  font-family: "Open Sans";
   src: local("opensans"), url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "Opensans";
+  font-family: "Open Sans";
   src: local("opensansbold"), url("../fonts/opensansbold.woff2") format("woff2"), url("../fonts/opensansbold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
@@ -803,7 +803,6 @@ a[href]:active .icon {
             flex-direction: column;
     margin-top: 0;
     padding: 24px 26px 0;
-    border-top: 1px solid #ececec;
     border-left: none;
   }
   .catalog__specs {
@@ -851,6 +850,10 @@ a[href]:active .icon {
 }
 .contacts {
   padding: 39px 0;
+}
+.contacts__container {
+  width: 81.25%;
+  margin: 0 auto;
 }
 .contacts__title {
   margin-bottom: 10px;
@@ -913,6 +916,9 @@ a[href]:active .icon {
             flex-direction: column;
     padding: 62px 0 58px;
   }
+  .contacts__container {
+    width: 86.98%;
+  }
   .contacts__title {
     margin-left: -3px;
     margin-bottom: 35px;
@@ -958,6 +964,8 @@ a[href]:active .icon {
 }
 @media (min-width: 1150px) {
   .contacts {
+    width: 1050px;
+    margin: 0 auto;
     position: relative;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -2140,10 +2148,10 @@ a[href]:active .icon {
   }
 }
 .reviews__wrapper {
-  padding: 29px 0 50px;
+  padding: 30px 0 50px;
 }
 .reviews__title {
-  margin-bottom: 23px;
+  margin-bottom: 22px;
 }
 .reviews__text {
   display: block;
@@ -2213,10 +2221,10 @@ a[href]:active .icon {
   margin: 0 auto;
 }
 @media (min-width: 768px) {
-  .reviews .container {
+  .reviews {
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
-    background-position: left 30px;
+    background-position: 0 30px;
   }
   .reviews__wrapper {
     display: -webkit-box;
@@ -2273,14 +2281,14 @@ a[href]:active .icon {
   }
 }
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
-  .reviews .container {
+  .reviews {
     background-image: url("../img/review@2x.jpg");
     background-size: 350px;
   }
 }
 @media (min-width: 1150px) {
-  .reviews .container {
-    background-position: left center;
+  .reviews {
+    background-position: calc((100% - 1050px) / 2 + 175px) center;
   }
   .reviews__wrapper {
     padding: 160px 0;
