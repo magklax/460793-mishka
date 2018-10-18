@@ -1,11 +1,7 @@
 .form {
-  padding: 23px 0 55px;
 
   &__text {
     display: block;
-    margin-bottom: 22px;
-    font-size: 13px;
-    line-height: 24px;
   }
 
   &__fieldset {
@@ -17,53 +13,39 @@
   &__subtitle {
     display: block;
     position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 60px;
-      width: calc(( 100% - 9.375% ) - 60px);
-      height: 1px;
-      background-color: @downy;
-    }
   }
 
   &__list {
     .reset-list();
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     padding: 22px 0 28px;
   }
 
-  &__item--filter {
-    margin-bottom: 21px;
-
-    label {
-      align-items: center;
-      min-height: 40px;
-      padding-left: 63px;
-    }
-  }
-
-  &__item--name {
-    padding-top: 8px;
-    margin-bottom: 17px;
-  }
-
-  &__item--contacts {
-    position: relative;
-    padding-top: 5px;
-    margin-bottom: 32px;
+  &__item:not(&__item--color) {
+    width: 100%;
   }
 
   label {
     display: flex;
     position: relative;
-    font-size: 17px;
     line-height: 18px;
     font-weight: 700;
     color: @black;
+  }
+
+  &__item--filter label {
+    align-items: center;
+    min-height: 40px;
+  }
+
+  &__item--color {
+    min-width: 240px;
+    width: 48%;
+  }
+
+  &__item--contacts {
+    position: relative;
   }
 
   &__field {
@@ -71,7 +53,6 @@
     box-sizing: border-box;
     padding: 0;
     min-height: 50px;
-    font-size: 17px;
     line-height: 18px;
     border: none;
     border-bottom: 2px solid @black;
@@ -92,8 +73,9 @@
 
   &__icon {
     position: absolute;
-    right: 0;
+    right: 5px;
     top: 25%;
+    opacity: 0.2;
   }
 
   &__input-radio,
@@ -108,14 +90,11 @@
   &__input-checkbox:checked + label::after {
     content: "";
     position: absolute;
-
     height: 36px;
     width: 36px;
-
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-
     border: 2px solid @grey;
     cursor: pointer;
   }
@@ -181,12 +160,11 @@
   }
 
   &__textarea {
-    margin: 23px 0 12px;
     min-width: 260px;
     width: 100%;
     min-height: 142px;
     padding: 15px;
-    font-size: 17px;
+
     line-height: 18px;
     overflow: hidden;
     border: 2px solid @black;
@@ -200,23 +178,71 @@
 
   &__footnote {
     display: block;
-    margin-bottom: 32px;
-    font-size: 14px;
-    line-height: 16px;
-  }
-
-  &__btn {
-    width: 100%;
-    max-width: 260px;
-    margin: 0 auto;
   }
 }
 
 @media (max-width: @mobile-width-only) {
-  .form__item--filter,
-  .form__item--name {
-    &:last-child {
-      margin-bottom: 0;
+  .form {
+    padding: 24px 0 55px;
+
+    &__text {
+      margin-bottom: 22px;
+      font-size: 13px;
+      line-height: 24px;
+    }
+
+    &__subtitle::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 60px;
+      width: calc(100% - 60px);
+      height: 1px;
+      background-color: @downy;
+    }
+
+    label {
+      font-size: 17px;
+    }
+
+    &__item--filter {
+      margin-bottom: 21px;
+
+      label {
+        padding-left: 63px;
+      }
+    }
+
+    &__item--name {
+      padding-top: 8px;
+      margin-bottom: 17px;
+    }
+
+    &__item--filter,
+    &__item--name {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__item--contacts {
+      padding-top: 5px;
+      margin-bottom: 32px;
+    }
+
+    &__field {
+      font-size: 17px;
+    }
+
+    &__textarea {
+      margin: 23px 0 12px;
+      font-size: 17px;
+    }
+
+    &__footnote {
+      margin-bottom: 32px;
+      font-size: 14px;
+      line-height: 16px;
     }
   }
 }
@@ -235,7 +261,7 @@
       padding: 65px 0 25px;
 
       &--contacts {
-        padding-bottom: 52px;
+        padding: 70px 0 52px;
       }
 
       &--submit {
@@ -254,69 +280,54 @@
       }
     }
 
-    &__fieldset--grey {
+    &__fieldset:nth-child(odd) {
       background-color: @whitesmoke;
     }
 
     &__subtitle {
       width: 25%;
-
-      &::after {
-        display: none;
-      }
     }
 
     &__list {
-      flex-wrap: wrap;
-      flex-direction: row;
       justify-content: space-between;
       width: 75%;
       padding: 0;
       margin-top: -13px;
     }
 
+    label {
+      font-size: 19px;
+    }
+
     &__item {
-      width: 100%;
       display: flex;
+    }
 
-      &--filter {
-        margin-bottom: 35px;
+    &__item--filter {
+      margin-bottom: 35px;
 
-        label {
-          padding-left: 78px;
-        }
-      }
-
-      &--color {
-        width: 48%;
-      }
-
-      &--name {
-        padding: 0;
-        margin-bottom: 25px;
-        align-items: center;
-
-        label {
-          padding-right: 25px;
-        }
-      }
-
-      &--contacts {
-        padding: 0;
-        padding-left: 42px;
-        margin: 0;
-        margin-top: -15px;
-        align-items: flex-start;
-      }
-
-      &--textarea {
-        padding-left: 42px;
+      label {
+        padding-left: 78px;
       }
     }
 
-    label {
-      display: inherit;
-      font-size: 19px;
+    &__item--name {
+      margin-bottom: 25px;
+      align-items: center;
+
+      label {
+        padding-right: 25px;
+      }
+    }
+
+
+    &__item--contacts {
+      padding-left: 42px;
+      margin-top: -15px;
+    }
+
+    &__item--textarea {
+      padding-left: 42px;
     }
 
     &__field {
@@ -325,10 +336,7 @@
     }
 
     &__icon {
-      opacity: 0.3;
-      position: absolute;
       right: 23px;
-      top: 25%;
     }
 
     &__input-radio:not(:checked) + label::before,
@@ -341,20 +349,18 @@
 
     &__textarea {
       font-size: 19px;
-      margin: 0;
       margin-top: -15px;
     }
 
     &__footnote {
       order: 4;
       align-self: center;
-      margin: 0;
       font-size: 17px;
       line-height: 30px;
     }
 
     &__btn {
-      max-width: 230px;
+      padding: 14px 30px;
       margin-left: 0;
       order: 1;
     }
@@ -363,11 +369,12 @@
 
 @media (min-width: @desktop-width) {
   .form {
-    padding: 117px 0 45px;
+    padding: 118px 0 55px;
 
     &__container--submit {
       padding: 0 175px;
       box-sizing: border-box;
+      margin-top: 20px;
     }
 
     &__text {
@@ -396,7 +403,6 @@
     }
 
     &__icon {
-      position: absolute;
       right: 5px;
     }
   }

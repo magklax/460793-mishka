@@ -1,7 +1,8 @@
 var navMain = document.querySelector('.main-nav');
 var navToggle = document.querySelector('.main-nav__toggle');
 var modalOverlay = document.querySelector('.modal');
-var orderButton = document.querySelector('.best-product__btn');
+var modalWindow = document.querySelector('.modal__wrapper');
+var orderButton = document.querySelector('.modal-open');
 var modalButton = document.querySelector('.modal__btn');
 
 /* Меню */
@@ -19,15 +20,19 @@ navToggle.addEventListener('click', function () {
 });
 
 /* Модальное окно */
-orderButton.addEventListener('click', function () {
+orderButton.addEventListener('click', function (evt) {
   'use strict';
+  evt.preventDefault();
   modalOverlay.classList.add('modal--show');
+  modalWindow.classList.add('modal__wrapper--show');
 });
 
-modalButton.addEventListener('click', function () {
+modalButton.addEventListener('click', function (evt) {
   'use strict';
+  evt.preventDefault();
   if (modalOverlay.classList.contains('modal--show')) {
     modalOverlay.classList.remove('modal--show');
+    modalWindow.classList.remove('modal__wrapper--show');
   }
 });
 
@@ -36,6 +41,7 @@ window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     if (modalOverlay.classList.contains("modal--show")) {
       modalOverlay.classList.remove("modal--show");
+      modalWindow.classList.remove('modal__wrapper--show');
     }
   }
 });

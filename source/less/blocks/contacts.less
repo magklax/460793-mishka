@@ -1,5 +1,5 @@
 .contacts {
-  padding: 39px 0;
+  padding: 40px 0;
 
   &__container {
     width: @mobile;
@@ -12,7 +12,7 @@
 
   &__table {
     border-collapse: collapse;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 
     td {
       padding: 15px 0;
@@ -48,7 +48,7 @@
 
   &__map {
     height: 457px;
-    margin-bottom: 39px;
+    margin-bottom: 40px;
     background-image: url("../img/map-mobile@1x.jpg");
     background-position: center top;
     background-repeat: no-repeat;
@@ -64,16 +64,17 @@
   }
 
   &__btn {
-    max-width: 260px;
-    margin: 0 auto;
+    width: @mobile;
   }
 }
+
+
 
 @media (min-width: @tablet-width) {
   .contacts {
     display: flex;
     flex-direction: column;
-    padding: 62px 0 58px;
+    padding: 60px 0;
 
     &__container {
       width: @tablet;
@@ -113,16 +114,12 @@
 
     &__map {
       background-image: url("../img/map-tablet@1x.jpg");
-      margin-bottom: 56px;
+      margin-bottom: 55px;
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
         background-image: url("../img/map-tablet@2x.jpg");
         background-size: 768px;
       }
-    }
-
-    &__btn {
-      padding: 14px 40px;
     }
   }
 }
@@ -174,7 +171,6 @@
 
     &__btn {
       position: absolute;
-      margin: 0;
       left: 175px;
       bottom: 108px;
     }
