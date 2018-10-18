@@ -1939,6 +1939,9 @@ button:hover {
   .modal__wrapper {
     width: 566px;
   }
+  .title--section {
+    font-size: 30px;
+  }
 }
 .page-footer {
   -webkit-box-sizing: border-box;
