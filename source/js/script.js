@@ -2,7 +2,7 @@ var navMain = document.querySelector('.main-nav');
 var navToggle = document.querySelector('.main-nav__toggle');
 var modalOverlay = document.querySelector('.modal');
 var modalWindow = document.querySelector('.modal__wrapper');
-var orderButton = document.querySelector('.modal-open');
+var orderButton = document.querySelectorAll('.modal-open');
 var modalButton = document.querySelector('.modal__btn');
 
 /* Меню */
@@ -20,12 +20,15 @@ navToggle.addEventListener('click', function () {
 });
 
 /* Модальное окно */
-orderButton.addEventListener('click', function (evt) {
-  'use strict';
-  evt.preventDefault();
-  modalOverlay.classList.add('modal--show');
-  modalWindow.classList.add('modal__wrapper--show');
-});
+
+ for (var i = 0; i < orderButton.length; i++) {
+  orderButton[i].addEventListener('click', function (evt) {
+    'use strict';
+    evt.preventDefault();
+    modalOverlay.classList.add('modal--show');
+    modalWindow.classList.add('modal__wrapper--show');
+  });
+}
 
 modalButton.addEventListener('click', function (evt) {
   'use strict';
