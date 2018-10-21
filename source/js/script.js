@@ -21,7 +21,7 @@ navToggle.addEventListener('click', function () {
 
 /* Модальное окно */
 
- for (var i = 0; i < orderButton.length; i++) {
+for (var i = 0; i < orderButton.length; i++) {
   orderButton[i].addEventListener('click', function (evt) {
     'use strict';
     evt.preventDefault();
@@ -48,3 +48,5 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
+
+
