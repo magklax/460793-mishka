@@ -1,4 +1,4 @@
-ymaps.ready(function () {
+maps.ready(function () {
   "use strict";
     var myMap = new ymaps.Map('map', {
     center: [59.9387515, 30.323040],
