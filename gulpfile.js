@@ -80,7 +80,7 @@ gulp.task("webp", function () {
 
 gulp.task("server", function () {
   server.init({
-    server: "build/"
+    server: "build/",
     open: true,
     cors: true,
     ui: false
