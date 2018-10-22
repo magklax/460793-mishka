@@ -5,9 +5,12 @@
     <title>HTML Academy: Мишка - Вязание на заказ</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <div class="page-header__container">
         <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -143,7 +146,7 @@
               <div class="form__item form__item--contacts">
                 <label class="visually-hidden" for="phone-field">Электронная почта</label>
                 <input class="form__field" id="email-field" type="email" name="email" value="" placeholder="Ваш Email*" required>
-                <svg class="form__icon" width="32" height="32"><use xlink:href="img/sprite.svg#icon-email"></use></svg>
+                <svg class="form__icon" width="32" height="32"><use xlink:href="img/sprite.svg#icon-mail"></use></svg>
               </div>
             </div>
           </div>
@@ -197,7 +200,7 @@
           <b class="copyright__text">Разработано</b>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="visually-hidden">Логотип HTML Academy</span>
-            <svg class="copyright__icon" width="26.943" height="34.09"><use xlink:href="img/sprite.svg#logo-htmlacademy"></use></svg>
+            <svg class="copyright__icon" width="26.943" height="34.09"><use xlink:href="img/sprite.svg#htmlacademy"></use></svg>
           </a>
         </div>
       </div>

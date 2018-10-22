@@ -5,11 +5,13 @@
     <title>HTML Academy: Мишка</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-    <script type="text/javascript" src="js/map.js"></script>
   </head>
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <div class="page-header__container">
         <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -166,7 +168,7 @@
     <footer class="page-footer">
       <div class="page-footer__container container">
         <div class="page-footer__logo">
-          <a>
+          <a href="index.html">
             <span class="visually-hidden">Логотип Mishka</span>
             <svg class="page-footer__icon" width="101.615" height="34.056"><use xlink:href="img/sprite.svg#logo-footer"></use></svg>
           </a>
@@ -195,7 +197,7 @@
           <b class="copyright__text">Разработано</b>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="visually-hidden">Логотип HTML Academy</span>
-            <svg class="copyright__icon" width="26.943" height="34.09"><use xlink:href="img/sprite.svg#logo-htmlacademy"></use></svg>
+            <svg class="copyright__icon" width="27" height="34"><use xlink:href="img/sprite.svg#htmlacademy"></use></svg>
           </a>
         </div>
       </div>
@@ -223,5 +225,6 @@
     </div>
     <script type="text/javascript" src="js/script.js"></script>
     <script src="js/picturefill.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
   </body>
 </html>
