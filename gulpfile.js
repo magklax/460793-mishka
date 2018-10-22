@@ -81,9 +81,9 @@ gulp.task("webp", function () {
 gulp.task("server", function () {
   server.init({
     server: "build/"
-//    open: true,
-//    cors: true,
-//    ui: false
+    open: true,
+    cors: true,
+    ui: false
   });
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
