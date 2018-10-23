@@ -1,3 +1,17 @@
+@keyframes bounce {
+  0% {
+    transform: scale(0.1);
+  }
+
+  70% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -18,17 +32,26 @@
     content: "";
   }
 
+  &--show {
+    display: block;
+  }
+
   &__wrapper {
     position: relative;
-    display: inline-block;
+    display: none;
     vertical-align: middle;
     width: 100%;
     height: auto;
-    padding: 35px 30px;
+    padding: 35px calc((100% - @mobile) / 2);
     box-sizing: border-box;
     text-align: center;
     background-color: @white;
     box-shadow: 0 5px 10px 0 rgba(@black, 0.25);
+
+    &--show {
+      display: inline-block;
+      animation: bounce 0.6s ease;
+    }
   }
 
   &__title {
@@ -42,10 +65,11 @@
 
   &__filter {
     .reset-list();
-    margin: 23px 0 35px;
-    width: 100%;
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    max-width: 350px;
+    margin: 23px auto 35px;
   }
 
   &__item {
@@ -72,6 +96,7 @@
     &:hover,
     &:focus {
       border: 2px solid rgba(@grey, 0.3);
+      transition: 0.5s ease-in-out;
     }
   }
 
@@ -80,18 +105,19 @@
   }
 
   &__btn {
+    max-width: 350px;
     color: @white;
     background-color: @downy;
     border: none;
   }
 }
 
-.modal--show {
-  display: block;
-}
-
 @media (min-width: @tablet-width) {
   .modal__wrapper {
     width: 566px;
+  }
+
+  .title--section {
+    font-size: 30px;
   }
 }

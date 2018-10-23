@@ -4,8 +4,6 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
-
-    height: 88px;/* ?? */
     min-width: 768px;
     border-bottom: 1px solid rgba(@grey, 0.1);
 
@@ -18,8 +16,10 @@
 
 @media (min-width: @desktop-width) {
   .page-header {
+    border-bottom: none;
+
     &__container {
-      width: @desktop;
+      width: calc(@desktop + 100px);
     }
   }
 }

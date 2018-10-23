@@ -3,7 +3,7 @@
   box-sizing: border-box;
 
   &__header {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
   }
 
   &__index {
@@ -12,12 +12,12 @@
 
   &__text {
     display: block;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
   }
 
   &__table {
     width: 100%;
-    margin-bottom: 29px;
+    margin-bottom: 28px;
     border-collapse: collapse;
   }
 
@@ -35,12 +35,13 @@
 
   &__pic {
     text-align: center;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
+    font-size: 0;
   }
 
   &__price {
     display: block;
-    margin-bottom: 27px;
+    margin-bottom: 28px;
     text-align: center;
     font-size: 17px;
     line-height: 24px;
@@ -50,12 +51,12 @@
 
 @media (min-width: @tablet-width) {
   .best-product {
-    padding: 43px 0 65px;
+    padding: 45px 0 65px;
 
     &__header {
       display: flex;
       align-items: center;
-      margin-bottom: 60px;
+      margin-bottom: 56px;
     }
 
     &__title {
@@ -66,7 +67,7 @@
       width: 155px;
       display: block;
       margin-right: 0;
-      padding-top: 8px;
+      padding-top: 5px;
       text-align: center;
     }
 
@@ -104,7 +105,11 @@
 
     &__price {
       font-size: 20px;
-      margin-bottom: 37px;
+      margin-bottom: 35px;
+    }
+
+    &__btn {
+      max-width: none;
     }
   }
 }

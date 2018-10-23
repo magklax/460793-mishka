@@ -5,11 +5,12 @@
     <title>HTML Academy: Мишка</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-    <script type="text/javascript" src="js/map.js"></script>
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <div class="page-header__container">
         <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -62,12 +63,12 @@
         <h1 class="products__title products__title--index title--page title container">Милые штуки ручной<br>работы для дома</h1>
         <ul class="products__list">
           <li class="products__item">
-            <a class="products__link products__link--left" href="#">
+            <a class="products__link products__link--left" href="interier.html">
               <span>Предметы<br> интерьера</span>
             </a>
           </li>
           <li class="products__item">
-            <a class="products__link products__link--right" href="#">
+            <a class="products__link products__link--right" href="toys.html">
               <span>Детские<br> игрушки</span>
             </a>
           </li>
@@ -109,7 +110,7 @@
               </div>
               <div class="best-product__wrapper best-product__wrapper--price">
                 <span class="best-product__price">Цена: 990 руб.</span>
-                <a href="#" class="best-product__btn btn">Заказать</a>
+                <a href="order.html" class="best-product__btn btn modal-open">Заказать</a>
               </div>
             </div>
           </div>
@@ -139,9 +140,7 @@
                 <button class="reviews__next" type="button"><span class="visually-hidden">Следующий отзыв</span></button>
               </div>
             </div>
-            <div class="reviews__wrapper--btn">
-              <a href="#" class="reviews__btn btn">Написать</a>
-            </div>
+              <a href="write-review.html" class="reviews__btn btn">Написать</a>
           </div>
         </div>
       </section>
@@ -159,16 +158,14 @@
               </tr>
             </table>
           </div>
-        <div class="contacts__map" id="map">
-
-        </div>
-        <a href="#" class="contacts__btn btn">Напишите нам</a>
+        <div class="contacts__map" id="map"></div>
+        <a href="write-us.html" class="contacts__btn btn">Напишите нам</a>
       </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__container container">
         <div class="page-footer__logo">
-          <a href="#">
+          <a href="index.html">
             <span class="visually-hidden">Логотип Mishka</span>
             <svg class="page-footer__icon" width="101.615" height="34.056"><use xlink:href="img/sprite.svg#logo-footer"></use></svg>
           </a>
@@ -197,14 +194,14 @@
           <b class="copyright__text">Разработано</b>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="visually-hidden">Логотип HTML Academy</span>
-            <svg class="copyright__icon" width="26.943" height="34.09"><use xlink:href="img/sprite.svg#logo-htmlacademy"></use></svg>
+            <svg class="copyright__icon" width="27" height="34"><use xlink:href="img/sprite.svg#htmlacademy"></use></svg>
           </a>
         </div>
       </div>
     </footer>
     <div class="modal">
       <div class="modal__wrapper">
-        <h2 class="modal__title title--section title">Добавить<br>в корзину</h2>
+        <h2 class="modal__title title--section title">Добавить в корзину</h2>
         <span class="modal__text">Выберите размер:</span>
         <ul class="modal__filter">
           <li class="modal__item">
@@ -220,9 +217,11 @@
             <label class="modal__label" for="large-size">L</label>
           </li>
         </ul>
-        <a href="#" class="modal__btn btn">Добавить</a>
+        <a href="but.html" class="modal__btn btn">Добавить</a>
       </div>
     </div>
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABLDrl5ibRDnpoi1O-F8y33i5Q3lizexc&callback=initMap" async defer></script>
   </body>
 </html>
