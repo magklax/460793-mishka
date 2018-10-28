@@ -19,13 +19,6 @@ img {
   margin: 0 auto;
 }
 
-
-@media (max-width: @mobile-width-only) {
-  .container-fixed {
-    width: 260px;
-  }
-}
-
 .underline-section {
   position: relative;
 
@@ -42,6 +35,12 @@ img {
   }
 }
 
+@media (max-width: @mobile-width-only) {
+  .container-fixed {
+    width: 260px;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .container {
     width: @tablet;
@@ -55,16 +54,15 @@ img {
 
 @media (min-width: @desktop-width) {
   .container {
-    width: 1050px;
+    width: @desktop;
     margin: 0 auto;
   }
 
   .underline-section::after {
-    left: 50%;
-    transform: translateX(-50%);
+    right: 100px;
     height: 23px;
-    width: @desktop;
     background-size: auto 23px;
+    background-position: center 0;
     background-repeat: no-repeat;
   }
 }
