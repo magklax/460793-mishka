@@ -25,7 +25,7 @@
     width: 100%;
   }
 
-  label {
+  &__label {
     display: flex;
     position: relative;
     line-height: 18px;
@@ -33,7 +33,7 @@
     color: @black;
   }
 
-  &__item--filter label {
+  &__item--filter .form__label {
     align-items: center;
     min-height: 40px;
   }
@@ -200,14 +200,14 @@
       background-color: @downy;
     }
 
-    label {
+    &__label {
       font-size: 17px;
     }
 
     &__item--filter {
       margin-bottom: 21px;
 
-      label {
+      .form__label {
         padding-left: 63px;
       }
     }
@@ -294,7 +294,7 @@
       margin-top: -13px;
     }
 
-    label {
+    &__label {
       font-size: 19px;
     }
 
@@ -305,7 +305,7 @@
     &__item--filter {
       margin-bottom: 35px;
 
-      label {
+      .form__label {
         padding-left: 78px;
       }
     }
@@ -314,7 +314,7 @@
       margin-bottom: 25px;
       align-items: center;
 
-      label {
+      .form__label {
         padding-right: 25px;
       }
     }

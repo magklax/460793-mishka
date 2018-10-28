@@ -69,11 +69,11 @@
             <ul class="form__list">
               <li class="form__item form__item--filter">
                 <input class="form__input-radio" type="radio" id="accessory-type" name="type" value="accessory" checked>
-                <label for="accessory-type">Аксессуар для интерьера</label>
+                <label class="form__label" for="accessory-type">Аксессуар для интерьера</label>
               </li>
               <li class="form__item form__item--filter">
                 <input class="form__input-radio" type="radio" id="toy-type" name="type" value="toy">
-                <label for="toy-type">Детская игрушка</label>
+                <label class="form__label" for="toy-type">Детская игрушка</label>
               </li>
             </ul>
           </div>
@@ -84,27 +84,27 @@
             <ul class="form__list">
               <li class="form__item form__item--filter form__item--color">
                 <input class="form__input-checkbox" type="checkbox" id="white-color" name="color" value="white" checked>
-                <label for="white-color">Белый</label>
+                <label class="form__label" for="white-color">Белый</label>
               </li>
               <li class="form__item form__item--filter form__item--color">
                 <input class="form__input-checkbox" type="checkbox" id="gray-color" name="color" value="gray" checked>
-                <label for="gray-color">Серый</label>
+                <label class="form__label" for="gray-color">Серый</label>
               </li>
               <li class="form__item form__item--filter form__item--color">
                 <input class="form__input-checkbox" type="checkbox" id="tiffany-color" name="color" value="tiffany">
-                <label for="tiffany-color">«Тиффани»</label>
+                <label class="form__label" for="tiffany-color">«Тиффани»</label>
               </li>
               <li class="form__item form__item--filter form__item--color">
                 <input class="form__input-checkbox" type="checkbox" id="black-color" name="color" value="black">
-                <label for="black-color">Черный</label>
+                <label class="form__label" for="black-color">Черный</label>
               </li>
               <li class="form__item form__item--filter form__item--color">
                 <input class="form__input-checkbox" type="checkbox" id="pink-color" name="color" value="pink">
-                <label for="pink-color">Розовый</label>
+                <label class="form__label" for="pink-color">Розовый</label>
               </li>
               <li class="form__item form__item--filter form__item--color">
                 <input class="form__input-checkbox" type="checkbox" id="orange-color" name="color" value="orange">
-                <label for="orange-color">Оранжевый</label>
+                <label class="form__label" for="orange-color">Оранжевый</label>
               </li>
             </ul>
           </div>
@@ -114,15 +114,15 @@
             <span class="form__subtitle subtitle">ФИО</span>
             <ul class="form__list">
               <li class="form__item form__item--name">
-                <label for="first-name-field">Имя:</label>
+                <label class="form__label" for="first-name-field">Имя:</label>
                 <input class="form__field" id="first-name-field" type="text" name="first-name" value="" placeholder="Введите ваше имя*" required>
               </li>
               <li class="form__item form__item--name">
-                <label for="last-name-field">Фамилия:</label>
+                <label class="form__label" for="last-name-field">Фамилия:</label>
                 <input class="form__field" id="last-name-field" type="text" name="last-name" value="" placeholder="Укажите фамилию*" required>
               </li>
               <li class="form__item form__item--name">
-                <label for="patronymic-name-field">Отчество:</label>
+                <label class="form__label" for="patronymic-name-field">Отчество:</label>
                 <input class="form__field" id="patronymic-name-field" type="text" name="patronymic-name" value="" placeholder="Отчество, если желаете">
               </li>
             </ul>
@@ -131,17 +131,15 @@
         <fieldset class="form__fieldset">
           <div class="container form__container--contacts">
             <div class="form__wrapper form__wrapper--contacts">
-              <span class="form__subtitle subtitle">Тел</span>
+              <label class="form__subtitle subtitle" for="phone-field">Тел</label>
               <div class="form__item form__item--contacts">
-                <label class="visually-hidden" for="phone-field">Телефон</label>
                 <input class="form__field" id="phone-field" type="tel" name="phone" value="" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
                 <svg class="form__icon" width="25" height="24"><use xlink:href="img/sprite.svg#icon-phone"></use></svg>
               </div>
             </div>
             <div class="form__wrapper">
-              <span class="form__subtitle subtitle">E-mail</span>
+              <label class="form__subtitle subtitle" for="phone-field">E-mail</label>
               <div class="form__item form__item--contacts">
-                <label class="visually-hidden" for="phone-field">Электронная почта</label>
                 <input class="form__field" id="email-field" type="email" name="email" value="" placeholder="Ваш Email*" required>
                 <svg class="form__icon" width="32" height="32"><use xlink:href="img/sprite.svg#icon-mail"></use></svg>
               </div>
@@ -151,9 +149,8 @@
         <fieldset class="form__fieldset">
           <div class="container form__container">
             <div class="form__wrapper">
-              <span class="form__subtitle subtitle">Доп</span>
+              <label class="form__subtitle subtitle" for="other-field">Доп</label>
               <div class="form__item form__item--textarea">
-                <label class="visually-hidden" for="other-field">Дополнительная информация</label>
                 <textarea class="form__textarea" id="other-field" name="other" placeholder="Опишите все ваши пожелания к заказу"></textarea>
               </div>
             </div>
@@ -204,5 +201,7 @@
     </footer>
     <script src="js/script.min.js"></script>
     <script src="js/picturefill.min.js"></script>
+    <script src="js/svg4everybody.min.js"></script>
+    <script>svg4everybody(); // run it now or whenever you are ready</script>
   </body>
 </html>

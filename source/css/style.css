@@ -608,6 +608,9 @@ button:hover {
   margin-bottom: 10px;
   font-size: 0;
 }
+.best-product__pic img {
+  width: 100%;
+}
 .best-product__price {
   display: block;
   margin-bottom: 28px;
@@ -693,6 +696,7 @@ button:hover {
         -ms-flex-order: 1;
             order: 1;
     width: 875px;
+    z-index: 100;
   }
   .best-product__subtitle {
     width: 175px;
@@ -709,7 +713,6 @@ button:hover {
   }
   .best-product__pic {
     margin-top: -168px;
-    z-index: -1;
   }
   .best-product__price {
     margin-bottom: 33px;
@@ -735,6 +738,9 @@ button:hover {
 .catalog__photo {
   font-size: 0;
   line-height: 0;
+}
+.catalog__photo img {
+  width: 100%;
 }
 .catalog__info {
   margin-top: -9px;
@@ -967,6 +973,9 @@ button:hover {
     background-image: url("../img/map-tablet@1x.jpg");
     margin-bottom: 55px;
   }
+  .contacts__btn {
+    width: auto;
+  }
 }
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
   .contacts__map {
@@ -1115,7 +1124,7 @@ button:hover {
 .form__item:not(.form__item--color) {
   width: 100%;
 }
-.form label {
+.form__label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1124,7 +1133,7 @@ button:hover {
   font-weight: 700;
   color: #000000;
 }
-.form__item--filter label {
+.form__item--filter .form__label {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1271,13 +1280,13 @@ button:hover {
     height: 1px;
     background-color: #63d1bb;
   }
-  .form label {
+  .form__label {
     font-size: 17px;
   }
   .form__item--filter {
     margin-bottom: 21px;
   }
-  .form__item--filter label {
+  .form__item--filter .form__label {
     padding-left: 63px;
   }
   .form__item--name {
@@ -1353,7 +1362,7 @@ button:hover {
     padding: 0;
     margin-top: -13px;
   }
-  .form label {
+  .form__label {
     font-size: 19px;
   }
   .form__item {
@@ -1364,7 +1373,7 @@ button:hover {
   .form__item--filter {
     margin-bottom: 35px;
   }
-  .form__item--filter label {
+  .form__item--filter .form__label {
     padding-left: 78px;
   }
   .form__item--name {
@@ -1373,7 +1382,7 @@ button:hover {
         -ms-flex-align: center;
             align-items: center;
   }
-  .form__item--name label {
+  .form__item--name .form__label {
     padding-right: 25px;
   }
   .form__item--contacts {
@@ -1592,6 +1601,7 @@ button:hover {
   .main-nav__list--site {
     position: absolute;
     top: 100%;
+    left: 0;
     font-size: 15px;
   }
   .main-nav__list--user {
@@ -1623,6 +1633,7 @@ button:hover {
   .main-nav__link--search {
     min-width: 82px;
     font-size: 0;
+    height: 24px;
   }
   .main-nav__link--cart {
     padding-left: 84px;
@@ -1665,6 +1676,7 @@ button:hover {
   .main-nav__list--desktop {
     position: absolute;
     top: 100%;
+    left: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1700,6 +1712,9 @@ button:hover {
   height: 150px;
   margin: 0 auto 30px;
   font-size: 0;
+}
+.manufacture__video img {
+  width: 100%;
 }
 .manufacture__play {
   position: absolute;
@@ -1941,7 +1956,7 @@ button:hover {
   .modal__wrapper {
     width: 566px;
   }
-  .title--section {
+  .modal__wrapper .title--section {
     font-size: 30px;
   }
 }
@@ -2302,7 +2317,7 @@ button:hover {
   }
   .reviews__btn {
     margin-right: 0;
-    margin-bottom: auto;
+    margin-bottom: 50px;
     -ms-flex-preferred-size: 175px;
         flex-basis: 175px;
   }
