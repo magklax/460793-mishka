@@ -1633,6 +1633,7 @@ button:hover {
   .main-nav__link--search {
     min-width: 82px;
     font-size: 0;
+    height: 24px;
   }
   .main-nav__link--cart {
     padding-left: 84px;
