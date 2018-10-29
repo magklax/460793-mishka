@@ -6,20 +6,20 @@
   .page-header {
     min-width: 768px;
     border-bottom: 1px solid rgba(@grey, 0.1);
+  }
 
-    &__container {
-      width: @tablet;
-      margin: 0 auto;
-    }
+  .page-header__container {
+    width: @tablet;
+    margin: 0 auto;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
     border-bottom: none;
+  }
 
-    &__container {
-      width: calc(@desktop + 100px);
-    }
+  .page-header__container {
+    width: calc(@desktop + 100px);
   }
 }
