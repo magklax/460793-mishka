@@ -11,17 +11,17 @@
     display: none;
   }
 
-  &__icon {
+  &__link svg {
     fill: @black;
   }
 
-  a[href]:focus .page-footer__icon,
-  a[href]:hover .page-footer__icon {
-    fill: @downy;
+  &__link:hover svg,
+  &__link:focus svg {
+    fill: @puertorico;
   }
 
-  a[href]:active .page-footer__icon {
-    fill: rgba(@black, 0.3);
+  &__link:active {
+    opacity: 0.3;
   }
 }
 

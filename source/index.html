@@ -18,9 +18,7 @@
               <img src="img/logo-mobile.svg" alt="Логотип магазина Mishka">
             </picture>
           </a>
-          <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
+          <button class="main-nav__toggle" type="button" aria-label="Открыть или закрыть меню"></button>
           <ul class="main-nav__list main-nav__list--site">
             <li class="main-nav__item">
               <a class="main-nav__link main-nav__link--site" href="catalog.html">Каталог товаров</a>
@@ -133,8 +131,8 @@
               <span class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</span>
               <span class="reviews__author-name">Анастасия Красильникова<span class="reviews__author-id">@misssssiskras</span></span>
               <div class="reviews__nav">
-                <button class="reviews__prev" type="button"><span class="visually-hidden">Предыдущий отзыв</span></button>
-                <button class="reviews__next" type="button"><span class="visually-hidden">Следующий отзыв</span></button>
+                <button class="reviews__prev" type="button" aria-label="Предыдущий отзыв"></button>
+                <button class="reviews__next" type="button" aria-label="Следующий отзыв"></button>
               </div>
             </div>
               <a href="write-review.html" class="reviews__btn btn">Написать</a>
@@ -159,41 +157,34 @@
         <a href="write-us.html" class="contacts__btn btn">Напишите нам</a>
       </section>
     </main>
-    <footer class="page-footer">
+<footer class="page-footer">
       <div class="page-footer__container container">
         <div class="page-footer__logo">
-          <a href="index.html">
-            <span class="visually-hidden">Логотип Mishka</span>
+          <a class="page-footer__link" href="index.html" aria-label="Перейти на главную страницу сайта Mishka">
             <svg class="page-footer__icon" width="102" height="34"><use xlink:href="img/sprite.svg#logo-footer"></use></svg>
           </a>
         </div>
         <ul class="page-footer__social social">
           <li class="social__item">
-            <a class="social__link" href="#">
-              <span class="visually-hidden">Instagram</span>
+            <a class="page-footer__link social__link" href="#" aria-label="Instagram">
               <svg class="page-footer__icon" width="22" height="21"><use xlink:href="img/sprite.svg#icon-insta"></use></svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#">
-              <span class="visually-hidden">Facebook</span>
+            <a class="page-footer__link social__link" href="#" aria-label="Facebook">
               <svg class="page-footer__icon" width="15" height="28"><use xlink:href="img/sprite.svg#icon-fb"></use></svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#">
-              <span class="visually-hidden">Twitter</span>
+            <a class="page-footer__link social__link" href="#" aria-label="Twitter">
               <svg class="page-footer__icon" width="24" height="20"><use xlink:href="img/sprite.svg#icon-twitter"></use></svg>
             </a>
           </li>
         </ul>
-        <div class="page-footer__copyright copyright">
-          <b class="copyright__text">Разработано</b>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <span class="visually-hidden">Логотип HTML Academy</span>
-            <svg class="copyright__icon" width="27" height="34"><use xlink:href="img/sprite.svg#htmlacademy"></use></svg>
-          </a>
-        </div>
+        <a class="copyright page-footer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на сайт HTML Academy">
+          <span class="copyright__text">Разработано</span>
+          <svg class="copyright__icon" width="27" height="34"><use xlink:href="img/sprite.svg#htmlacademy"></use></svg>
+        </a>
       </div>
     </footer>
     <div class="modal">

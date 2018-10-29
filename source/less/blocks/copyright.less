@@ -1,35 +1,22 @@
 .copyright {
+  .reset-link();
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
+  font-size: 19px;
+  line-height: 18px;
+  font-weight: 700;
+  color: @black;
+}
 
-  &__text {
-    margin: 0;
-    margin-right: 30px;
-    font-size: 19px;
-    line-height: 18px;
-    font-weight: 700;
-  }
+.copyright__text {
+  margin-right: 30px;
+}
 
-  &__link {
-    .reset-link();
-    line-height: 0;
-
-    &:hover .copyright__icon,
-    &:focus .copyright__icon {
-      fill: @puertorico;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
-  }
-
-  &__icon {
-    fill: @downy;
-  }
+.copyright .copyright__icon {
+  fill: @downy;
 }
 
 @media (min-width: @tablet-width) {
