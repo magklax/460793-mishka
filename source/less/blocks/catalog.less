@@ -17,10 +17,6 @@
 .catalog__photo {
   font-size: 0;
   line-height: 0;
-
-  img {
-    width: 100%;
-  }
 }
 
 .catalog__info {
@@ -124,22 +120,23 @@
 @media (min-width: @desktop-width) {
   .catalog {
     padding-top: 125px;
-    margin-bottom: 55px;
+    margin-bottom: 35px;
   }
 
   .catalog__list {
     display: flex;
+    flex-wrap: wrap;
     margin: 0 -25px;
   }
 
   .catalog__item {
     flex-direction: column;
-    margin: 0 25px;
+    margin: 0 25px 25px;
+    max-width: 316px;
   }
 
   .catalog__photo {
     width: 100%;
-    height: auto;
   }
 
   .catalog__info {
