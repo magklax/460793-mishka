@@ -17,7 +17,7 @@ var pump = require("pump");
 const htmlmin = require("gulp-htmlmin");
 
 gulp.task("clean", function () {
-  return del("build");
+  return del("docs");
 });
 
 gulp.task("copy", function () {
@@ -27,7 +27,7 @@ gulp.task("copy", function () {
   ], {
     base: "source"
   })
-  .pipe(gulp.dest("build"));
+  .pipe(gulp.dest("docs"));
 });
 
 gulp.task("css", function () {
@@ -37,10 +37,10 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("docs/css"))
     .pipe(csso())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("docs/css"))
     .pipe(server.stream());
 });
 
@@ -50,7 +50,7 @@ gulp.task("sprite", function () {
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("docs/img"));
 });
 
 gulp.task("compress", function (cb) {
@@ -58,7 +58,7 @@ gulp.task("compress", function (cb) {
         gulp.src("source/js/*.js"),
         uglify(),
         rename({suffix: ".min"}),
-        gulp.dest("build/js")
+        gulp.dest("docs/js")
     ],
     cb
   );
@@ -67,7 +67,7 @@ gulp.task("compress", function (cb) {
 gulp.task("minify", () => {
   return gulp.src("source/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("build/"));
+    .pipe(gulp.dest("docs/"));
 });
 
 gulp.task("images", function () {
@@ -88,7 +88,7 @@ gulp.task("webp", function () {
 
 gulp.task("server", function () {
   server.init({
-    server: "build/",
+    server: "docs/",
     open: true,
     cors: true,
     ui: false
@@ -104,5 +104,5 @@ gulp.task("refresh", function (done) {
   done();
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "compress", "sprite", "minify"));
-gulp.task("start", gulp.series("build", "server"));
+gulp.task("docs", gulp.series("clean", "copy", "css", "compress", "sprite", "minify"));
+gulp.task("start", gulp.series("docs", "server"));
